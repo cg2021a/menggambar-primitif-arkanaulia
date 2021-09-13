@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menggambar Primitif</title>
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
 </head>
-<body onload="main()">
-    <canvas id="myCanvas" width="750" height="500" style="border: 1px solid black;">
 
+<body>
+<h1>Titik</h1>
+<div class="cont">
+    <canvas id="myCanvas-titik" width="750px" height="500px" style="border: 1px solid black;">
     </canvas>
     <script type="notjs" id="fragmentShaderCode">
         void main(){
-            gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+            gl_FragColor = vec4(0, 1, 0.5, 1.0);
         }
     </script>
     <script type="notjs" id="vertexShaderCode">
@@ -23,5 +25,66 @@
             gl_PointSize = 20.0;
         }
     </script>
+</div>
+
+<h1>3 Titik</h1>
+<div class="cont">
+    <canvas id="myCanvas-tigatitik" width="750px" height="500px" style="border: 1px solid black;">
+    </canvas>
+    <script type="notjs" id="fragmentShaderCode">
+        void main(){
+            gl_FragColor = vec4(0, 1, 0.5, 1.0);
+        }
+    </script>
+    <script type="notjs" id="vertexShaderCode">
+        attribute vec2 a_Position;
+        void main(){
+            gl_Position = vec4(a_Position, 0.0, 1.0);
+            gl_PointSize = 20.0;
+        }
+    </script>
+</div>
+
+<h1>Kotak</h1>
+<div class="cont">
+    <canvas id="myCanvas-square" width="750px" height="500px" style="border: 1px solid black;">
+    </canvas>
+    <script type="notjs" id="fragmentShaderCode">
+        void main(){
+            gl_FragColor = vec4(0, 1, 0.5, 1.0);
+        }
+    </script>
+    <script type="notjs" id="vertexShaderCode">
+        attribute vec2 a_Position;
+        void main(){
+            gl_Position = vec4(a_Position, 0.0, 1.0);
+            gl_PointSize = 20.0;
+        }
+    </script>
+</div>
+
+<h1>Segitiga</h1>
+<div class="cont">
+    <canvas id="myCanvas-segitiga" width="750px" height="500px" style="border: 1px solid black;">
+    </canvas>
+    <script type="notjs" id="fragmentShaderCode">
+        void main(){
+            gl_FragColor = vec4(0, 1, 0.5, 1.0);
+        }
+    </script>
+    <script type="notjs" id="vertexShaderCode">
+        attribute vec2 a_Position;
+        void main(){
+            gl_Position = vec4(a_Position, 0.0, 1.0);
+            gl_PointSize = 20.0;
+        }
+    </script>
+</div>
+<script type="text/javascript" src="./titik.js"></script>
+<script type="text/javascript" src="./tigatitik.js"></script>
+<script type="text/javascript" src="./kotak.js"></script>
+<script type="text/javascript" src="./segitiga.js"></script>
+
 </body>
+
 </html>

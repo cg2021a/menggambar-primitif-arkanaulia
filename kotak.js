@@ -1,5 +1,5 @@
-function main(){
-    var canvas = document.getElementById("myCanvas");
+function kotak(){
+    var canvas = document.getElementById("myCanvas-square");
     var gl = canvas.getContext("webgl")
 
     //definisi titik-titik segitiga
@@ -58,10 +58,12 @@ function main(){
     gl.enableVertexAttribArray(aPosition);
 
     //set warna background
-    gl.clearColor(1.0, 1.0, 1.0, 1.0);
+    gl.clearColor(0.2, 0.2, 0.2, 1);
     //clear background
     gl.clear(gl.COLOR_BUFFER_BIT);
 
     //instruksi untuk menggambar
     gl.drawArrays(gl.TRIANGLES, 0, 6);
 }
+
+kotak();
